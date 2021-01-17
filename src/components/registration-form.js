@@ -1,11 +1,18 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+
+import { register } from "../redux/actions/auth";
 
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';import {useFormik} from "formik";
 import * as Yup from "yup";
 
 const RegistrationForm = () => {
+
+    const dispatch = useDispatch();
+
+    const [successful, setSuccessful] = React.useState(false);
 
     const {handleSubmit, handleChange, values, touched, errors, handleBlur, resetForm, isSubmitting} = useFormik({
         initialValues: {
@@ -26,13 +33,20 @@ const RegistrationForm = () => {
                 .oneOf([Yup.ref('password'), null], 'Пароли должны совпадать.')
         }),
         onSubmit: () => {
-            console.log('SUBMITTED')
+            setSuccessful(false);
+            dispatch(register(values.email, values.first_name, values.last_name, values.age, values.password))
+                .then(() => {
+                    setSuccessful(true);
+                })
+                .catch(() => {
+                    setSuccessful(false);
+                });
         }
     })
 
 
     return (
-        <form className='registration-form container'>
+        <form className='registration-form container' onSubmit={handleSubmit}>
             <h1>Регистрация</h1>
             <Row>
                 <Col className='registration-left-column'>
@@ -131,7 +145,7 @@ const RegistrationForm = () => {
                 <button className='back-button'>Вернуться назад</button>
             </Link>
 
-            <button className='register-button'>Зарегистрироваться</button>
+            <button className='register-button' type="submit">Зарегистрироваться</button>
         </form>
     );
 };
