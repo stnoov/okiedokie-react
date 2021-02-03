@@ -2,11 +2,13 @@ import './App.css';
 import {Route} from 'react-router-dom'
 
 import {Login, Registration, Welcome, Home} from "./pages";
-import { ToastContainer } from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 
 import {useSelector} from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
+
+import Header from "./components/Navbar/Navbar";
 
 function App() {
 
@@ -18,9 +20,12 @@ function App() {
             <Route path='/login' component={Login} exact/>
             <Route path='/registration' component={Registration} exact/>
             {isLoggedIn &&
-            <Route path='/home' component={Home} exact/>
+            <div>
+                <Header/>
+                <Route path='/home' component={Home} exact/>
+            </div>
             }
-            <ToastContainer />
+            <ToastContainer/>
         </div>
     );
 }

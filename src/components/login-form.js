@@ -5,10 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from 'react-router-dom';
 
 import { login } from "../redux/actions/auth";
+import {toast} from "react-toastify";
 
 const LoginForm = () => {
 
     const dispatch = useDispatch();
+
+    const notifyError = () => toast.error("Неверная почта или пароль");
 
     const [loading, setLoading] = React.useState(false);
     const { isLoggedIn } = useSelector(state => state.auth);
@@ -26,6 +29,7 @@ const LoginForm = () => {
                 .catch(() => {
                     setLoading(false);
                     resetForm()
+                    notifyError()
                 });
         }})
 
@@ -49,10 +53,6 @@ const LoginForm = () => {
                 name='password'
                 type='password'
                 placeholder='Пароль'/>
-            <label className="remember-me">
-                <input type="checkbox" />
-                Запомнить
-            </label>
             <p className='register-link'>Нет аккаунта? <u>Зарегистрироваться</u></p>
             <button className='log-in-button' type='submit' disabled={loading} >
                 {loading && (

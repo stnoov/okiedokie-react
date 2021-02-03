@@ -20,12 +20,12 @@
     margin-left: 20px;
 }
 
-.nav-links a {
+.nav-links .main-links {
     display: flex;
-    text-decoration: none;
     color: #f2f2f2;
     padding: 10px 25px;
 }
+
 
 .nav-links .user-info {
     display: flex;
