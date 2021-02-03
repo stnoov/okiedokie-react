@@ -1,20 +1,31 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import {useHistory} from "react-router-dom";
 
 import { register } from "../redux/actions/auth";
 
-import ReportProblemIcon from '@material-ui/icons/ReportProblem';import {useFormik} from "formik";
+import ReportProblemIcon from '@material-ui/icons/ReportProblem';
+
+import {useFormik} from "formik";
 import * as Yup from "yup";
+
+import { toast } from 'react-toastify';
+
+
 
 const RegistrationForm = () => {
 
+    const history = useHistory();
+
     const dispatch = useDispatch();
 
-    const [successful, setSuccessful] = React.useState(false);
+    const notify = () => toast("Регистрация прошла успешно!");
 
-    const {handleSubmit, handleChange, values, touched, errors, handleBlur, resetForm, isSubmitting} = useFormik({
+    const notifyError = () => toast.error("Данная почта уже зарегистрирована!");
+
+    const {handleSubmit, handleChange, values, touched, errors, handleBlur} = useFormik({
         initialValues: {
             first_name: '',
             last_name: '',
@@ -28,18 +39,18 @@ const RegistrationForm = () => {
             last_name: Yup.string().max(100, 'Фамилия слишком длинная!').required('Пожалуйста, укажите фамилию.'),
             age: Yup.number().required('Пожалуйста, укажите возраст.'),
             email: Yup.string().email('Неверная почта.').max(250, 'Почта слишком длинная!').required('Пожалуйста, укажите почту.'),
-            password: Yup.string().max(250, 'Пароль слишком длинный!').min(6, 'Пароль должен быть не менее 6 символов.').required('Пожалуйста, укажите пароль.'),
+            password: Yup.string().max(250, 'Пароль слишком длинный!').required('Пожалуйста, укажите пароль.'),
             confirm_password: Yup.string()
                 .oneOf([Yup.ref('password'), null], 'Пароли должны совпадать.')
         }),
         onSubmit: () => {
-            setSuccessful(false);
-            dispatch(register(values.email, values.first_name, values.last_name, values.age, values.password))
+            dispatch(register(values.email, values.first_name, values.last_name, values.age,0, values.password))
                 .then(() => {
-                    setSuccessful(true);
+                    history.push("/");
+                    notify()
                 })
                 .catch(() => {
-                    setSuccessful(false);
+                    notifyError()
                 });
         }
     })

@@ -25,11 +25,12 @@ const LoginForm = () => {
             })
                 .catch(() => {
                     setLoading(false);
+                    resetForm()
                 });
         }})
 
     if (isLoggedIn) {
-        return <Redirect to="/profile" />;
+        return <Redirect to="/home" />;
     }
 
     return (
