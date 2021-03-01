@@ -1,0 +1,18 @@
+.admin-page {
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.transparent-button {
+    background-color: transparent;
+    padding: 20px 35px;
+    color: white;
+    border: 1px solid #f77482;
+    margin: 10px;
+    width: 200px;
+}
+.transparent-button:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+}

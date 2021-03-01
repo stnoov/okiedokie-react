@@ -1,0 +1,40 @@
+.contact-page {
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.message-text {
+    margin-top: 40px;
+    width: 60%;
+    resize: none;
+    padding: 20px;
+    background: transparent;
+    border: 3px solid #A02974;
+    color: white;
+}
+
+input {
+    padding: 20px 50px;
+    margin: 10px;
+    background-color: transparent;
+    border: 3px solid #A02974;
+    color: white;
+    font-size: 18px;
+    outline: none
+}
+
+.send-button {
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 20px 35px;
+    color: white;
+    border: 1px solid #A02974;
+    margin-left: 38px;
+}
+
+.last-row {
+    max-width: 54%;
+
+}

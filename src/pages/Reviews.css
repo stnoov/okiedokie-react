@@ -1,0 +1,5 @@
+.reviews-page {
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+}
