@@ -1,14 +1,14 @@
 .navbar {
     overflow: hidden;
     background-color: transparent;
-    position: fixed;
+    position: absolute;
+    z-index: 10;
     top: 0;
     width: 100%;
-    box-shadow: 1px 9px 7px 0px rgba(0,0,0,0.20);
-    -webkit-box-shadow: 1px 9px 7px 0px rgba(0,0,0,0.20);
-    -moz-box-shadow: 1px 9px 7px 0px rgba(0,0,0,0.20);
+    box-shadow: 1px 9px 7px 0 rgba(0,0,0,0.20);
+    -webkit-box-shadow: 1px 9px 7px 0 rgba(0,0,0,0.20);
+    -moz-box-shadow: 1px 9px 7px 0 rgba(0,0,0,0.20);
     padding: 15px;
-
 }
 
 .main-links {
@@ -22,3 +22,14 @@
     color: white;
     padding: 0 15px;
 }
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-light .navbar-toggler {
+    border-color: rgb(255,255,255);
+}
+.navbar-light .navbar-toggler:focus{outline:0}
+#basic-navbar-nav {
+
+    z-index: 10;
+    }
