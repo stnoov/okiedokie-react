@@ -52,11 +52,22 @@ const Header = () => {
                     </Nav>
                     {user ?
                         <div className='user-info'>
-                            <div className='user-balance'>
-                                {user && user.balance}₽
-                            </div>
-                            <span>{user && user.first_name} {user && user.last_name}</span>
-                            <ExitToAppIcon className='logout-button' onClick={logOut}/>
+                            <Nav.Link>
+                                <div className='side-links'>
+                                    {user && user.balance}₽
+                                </div>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <div className='side-links'>
+                                    <span>{user && user.first_name} {user && user.last_name}</span>
+                                </div>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <div className="side-links">
+                                    <ExitToAppIcon className='logout-button' onClick={logOut}/>
+                                </div>
+                            </Nav.Link>
+
                         </div>
                         :
                         <div className='user-info'>

@@ -16,34 +16,7 @@ const Home = () => {
             <div className='geometry-bg home-page'>
                     <Container>
                         <Row className='home-content'>
-                            <Col>
-                                <Carousel>
-                                    <Carousel.Item>
-                                        <img
-                                            className="  carousel-image"
-                                            src={FirstSlide}
-                                            alt="First slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="  carousel-image"
-                                            src={SecondSlide}
-                                            alt="Third slide"
-                                        />
-                                    </Carousel.Item>
-                                </Carousel>
-                            </Col>
-                            <Col>
-                                <div className="useful-info">
-                                    <div className="okie-balance">
-                                        Ваши OkieDokie Points: 0
-                                    </div>
-                                    <div className="next-lessons">
-                                        Вы ещё не записаны на занятие
-                                    </div>
-                                </div>
-                            </Col>
+
                         </Row>
                         <Row>
                             <Col>

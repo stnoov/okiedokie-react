@@ -4,5 +4,30 @@
     flex-direction: row;
     flex-grow: 1;
     justify-items: center;
-    align-items: center;
+    padding-top: 150px;
+}
+
+.sort_header {
+    border: 2px solid rgba(247,116,130, 0.3);
+    padding: 15px 25px;
+    min-width: 320px;
+}
+.sort_body {
+    min-height: 100px;
+    min-width: 320px;
+    border: 2px solid rgba(247,116,130, 0.3);
+    border-top: none;
+    padding: 10px;
+}
+
+.sort_group {
+    border-bottom: 1px solid rgba(247,116,130, 0.3);
+}
+
+.sort_group label {
+    font-size: 18px;
+}
+
+.sort_date {
+    margin-top: 10px
 }

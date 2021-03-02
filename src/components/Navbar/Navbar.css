@@ -17,6 +17,12 @@
     padding: 0 30px;
 }
 
+.side-links {
+    color: white;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
 .user-balance, .auth-button {
     text-decoration: none;
     color: white;
