@@ -21,12 +21,13 @@ function App() {
             <Route path='/' component={Welcome} exact/>
             <Route path='/login' component={Login} exact/>
             <Route path='/registration' component={Registration} exact/>
+            <Route path='/contact' component={Contact} exact/>
+            <Route path='/reviews' component={Reviews} exact/>
             {isLoggedIn &&
             <div>
                 <Route path='/home' component={Home} exact/>
                 <Route path='/lessons' component={Lessons} exact/>
-                <Route path='/contact' component={Contact} exact/>
-                <Route path='/reviews' component={Reviews} exact/>
+
                 {user.roles.includes("ROLE_ADMIN") &&
                 <Route path='/admin' component={Admin} exact/>
                 }

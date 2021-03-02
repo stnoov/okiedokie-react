@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Nav, NavDropdown, Form, FormControl, Button, Container} from "react-bootstrap";
+import {Navbar, Nav, Container} from "react-bootstrap";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import './Navbar.css'
@@ -25,46 +25,50 @@ const Header = () => {
 
         <Navbar expand="lg">
             <Container>
-            <Navbar.Brand href="#home"><img src={Logo} alt={Logo}
-                                            style={{width: '110px', height: '52px'}}/></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">
-                        <Link to="/lessons" style={{textDecoration: 'none'}}>
-                            <span className='main-links'>Занятия</span>
-                        </Link>
-                    </Nav.Link>
-                    <Nav.Link href="#link">
-                        <Link to="/contact" style={{textDecoration: 'none'}}>
-                            <span className='main-links'>Связаться</span>
-                        </Link>
-                    </Nav.Link>
-                    <Nav.Link href="#link">
-                        <Link to="/reviews" style={{textDecoration: 'none'}}>
-                            <span className='main-links'>Отзывы</span>
-                        </Link>
-                    </Nav.Link>
-                </Nav>
-                {user ?
-                                <div className='user-info'>
-                                    <div className='user-balance'>
-                                        {user && user.balance}₽
-                                    </div>
-                                    <span>{user && user.first_name} {user && user.last_name}</span>
-                                    <ExitToAppIcon className='logout-button' onClick={logOut}/>
-                                </div>
-                                :
-                                    <div className='user-info'>
-                                        <Link to="/reviews" style={{textDecoration: 'none'}}>
-                                            <span className='auth-button'>Войти</span>
-                                        </Link>
-                                        <Link to="/reviews" style={{textDecoration: 'none'}}>
-                                            <span className='auth-button'>Зарегистрироваться</span>
-                                        </Link>
-                                    </div>
-                                }
-            </Navbar.Collapse>
+                <Navbar.Brand href="#home"><img src={Logo} alt={Logo}
+                                                style={{width: '110px', height: '52px'}}/></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">
+                            <Link to="/lessons" style={{textDecoration: 'none'}}>
+                                <span className='main-links'>Занятия</span>
+                            </Link>
+                        </Nav.Link>
+                        <Nav.Link href="#link">
+                            <Link to="/contact" style={{textDecoration: 'none'}}>
+                                <span className='main-links'>Связаться</span>
+                            </Link>
+                        </Nav.Link>
+                        <Nav.Link href="#link">
+                            <Link to="/reviews" style={{textDecoration: 'none'}}>
+                                <span className='main-links'>Отзывы</span>
+                            </Link>
+                        </Nav.Link>
+                    </Nav>
+                    {user ?
+                        <div className='user-info'>
+                            <div className='user-balance'>
+                                {user && user.balance}₽
+                            </div>
+                            <span>{user && user.first_name} {user && user.last_name}</span>
+                            <ExitToAppIcon className='logout-button' onClick={logOut}/>
+                        </div>
+                        :
+                        <div className='user-info'>
+                            <Nav.Link>
+                                <Link to="/reviews" style={{textDecoration: 'none'}}>
+                                    <span className='auth-button'>Войти</span>
+                                </Link>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <Link to="/reviews" style={{textDecoration: 'none'}}>
+                                    <span className='auth-button'>Зарегистрироваться</span>
+                                </Link>
+                            </Nav.Link>
+                        </div>
+                    }
+                </Navbar.Collapse>
             </Container>
         </Navbar>
 

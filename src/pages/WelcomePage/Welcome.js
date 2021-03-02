@@ -9,38 +9,47 @@ export default function WelcomePage() {
                 <Row>
                     <Col>
                         <div className='welcome-main-text'>
-                            OKIE DOKIE
+                            <span className='first-line'>OKIE</span> <span className='second-line'>DOKIE</span>
                         </div>
                         <div className='welcome-buttons'>
                             <Link to="/login">
-                                <button className='welcome-login-button'> Войти</button>
+                                <button className='welcome-button login-btn'>Войти</button>
                             </Link>
                             <Link to="/registration">
-                                <button className='welcome-register-button'> Зарегистрироваться</button>
+                                <button className='welcome-button'>Зарегистрироваться</button>
                             </Link>
                         </div>
                     </Col>
                     <Col>
                         <div className='welcome-about-text'>
                             <ul>
-                                <li>Okie Dokie! - это английский разговорный клуб для детей и подростков.</li>
+                                <li><h2><b>Английский разговорный клуб для детей и подростков</b></h2></li>
+                                <div className='about-list'>
+                                    <li><b>Okie Dokie!</b> – это отличный способ улучшить навыки говорения на английском
+                                        языке!
+                                    </li>
 
-                                <li>Okie Dokie! – это отличный способ улучшить навыки говорения на английском языке!
-                                </li>
+                                    <li><b>Okie Dokie!</b> – это непринужденная дружеская атмосфера, где в игровой форме
+                                        мы
+                                        поможем
+                                        тебе пополнить словарный запас, подсказжем, как правильно строятся английские
+                                        предложения и что именно нужно говорить в тех или иных ситуациях.
+                                    </li>
 
-                                <li>Okie Dokie! – это непринужденная дружеская атмосфера, где в игровой форме мы поможем
-                                    тебе пополнить словарный запас, подсказжем, как правильно строятся английские
-                                    предложения и что именно нужно говорить в тех или иных ситуациях.
-                                </li>
-
-                                <li>Okie Dokie! – это возможность использования английского языка! Практика поможет вам
-                                    чувствовать себя более уверенно и комфортно на уроках, экзаменах и реальных
-                                    жизненных ситуациях.
-                                </li>
+                                    <li><b>Okie Dokie!</b> – это возможность использования английского языка! Практика
+                                        поможет
+                                        вам
+                                        чувствовать себя более уверенно и комфортно на уроках, экзаменах и реальных
+                                        жизненных ситуациях.
+                                    </li>
+                                    <li>
+                                        <Link to="/login">
+                                            <button className='welcome-learnmore-button'> Узнать больше</button>
+                                        </Link>
+                                    </li>
+                                </div>
                             </ul>
-                            <Link to="/login">
-                                <button className='welcome-learnmore-button'> Узнать больше </button>
-                            </Link>
+
 
                         </div>
                     </Col>
