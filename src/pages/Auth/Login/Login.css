@@ -25,11 +25,6 @@
     opacity: 1;
 }
 
-.remember-me {
-    margin: 0 5px;
-    justify-self: flex-start;
-    align-self: flex-start;
-}
 
 .register-link {
     margin: 0 10px;
@@ -51,4 +46,16 @@
 .log-in-button:hover {
     background-color: #BD2CA0;
     outline: none
+}
+
+@media only screen and (max-width: 320px) {
+    .login-form input {
+        padding: 10px 30px;
+        margin: 10px;
+        background-color: transparent;
+        border: 3px solid #A02974;
+        color: white;
+        font-size: 18px;
+        outline: none
+    }
 }

@@ -25,22 +25,26 @@ const Header = () => {
 
         <Navbar expand="lg">
             <Container>
-                <Navbar.Brand href="#home"><img src={Logo} alt={Logo}
-                                                style={{width: '110px', height: '52px'}}/></Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    <Link to="/" style={{textDecoration: 'none'}}>
+                        <img src={Logo} alt={Logo}
+                             style={{width: '110px', height: '52px'}}/>
+                    </Link>
+                    </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">
+                        <Nav.Link>
                             <Link to="/lessons" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Занятия</span>
                             </Link>
                         </Nav.Link>
-                        <Nav.Link href="#link">
+                        <Nav.Link>
                             <Link to="/contact" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Связаться</span>
                             </Link>
                         </Nav.Link>
-                        <Nav.Link href="#link">
+                        <Nav.Link>
                             <Link to="/reviews" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Отзывы</span>
                             </Link>
@@ -57,12 +61,12 @@ const Header = () => {
                         :
                         <div className='user-info'>
                             <Nav.Link>
-                                <Link to="/reviews" style={{textDecoration: 'none'}}>
+                                <Link to="/login" style={{textDecoration: 'none'}}>
                                     <span className='auth-button'>Войти</span>
                                 </Link>
                             </Nav.Link>
                             <Nav.Link>
-                                <Link to="/reviews" style={{textDecoration: 'none'}}>
+                                <Link to="/registration" style={{textDecoration: 'none'}}>
                                     <span className='auth-button'>Зарегистрироваться</span>
                                 </Link>
                             </Nav.Link>

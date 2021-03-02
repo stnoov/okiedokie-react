@@ -18,7 +18,11 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            <Route path='/' component={Welcome} exact/>
+            {isLoggedIn ?
+                <Route path='/' component={Home} exact/>
+            :
+                <Route path='/' component={Welcome} exact/>
+            }
             <Route path='/login' component={Login} exact/>
             <Route path='/registration' component={Registration} exact/>
             <Route path='/contact' component={Contact} exact/>
