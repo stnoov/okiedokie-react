@@ -1,0 +1,87 @@
+.welcome-page {
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.welcome-main-text {
+    font-size: 149px;
+    line-height: 110px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.welcome-buttons {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.welcome-login-button {
+    background-color: transparent;
+    padding: 20px 35px;
+    color: white;
+    border: 1px solid #f77482;
+    text-align: left;
+    float: left;
+    margin-left: 38px;
+}
+.welcome-login-button:focus{outline:0}
+
+.welcome-login-button:hover, .welcome-register-button:hover, .welcome-learnmore-button:hover {
+    background-color: rgba(247,116,130, 0.3);
+}
+
+.welcome-register-button {
+    background-color: transparent;
+    padding: 20px 35px;
+    color: white;
+    border: 1px solid #f77482;
+    float: right;
+}
+
+.welcome-register-button:focus{outline:0}
+
+.welcome-learnmore-button {
+    background-color: transparent;
+    padding: 20px 35px;
+    color: white;
+    border: 1px solid #f77482;
+    width: 95%;
+    margin-left: 30px;
+
+}
+.welcome-learnmore-button:focus{outline:0}
+
+
+.welcome-about-text {
+    text-align: justify;
+    line-height: 22px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .welcome-page {
+        padding-top: 15rem;
+        min-height: 100vh;
+    }
+
+    .welcome-main-text {
+        font-size: 90px;
+        line-height: 90px;
+        text-align: right;
+        font-weight: 600;
+    }
+
+    .welcome-login-button, .welcome-register-button {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+}
