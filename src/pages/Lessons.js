@@ -69,6 +69,117 @@ const Lessons = () => {
 
 
                         </div>
+
+                        <div className="lesson-list-item">
+                            <div className="lesson-item-image">
+                                <img src={Logo} alt={Logo}
+                                     style={{width: '110px', height: '52px'}}/>
+                            </div>
+                            <div className='lesson-item-text'>
+                                <div className="lesson-item-title">
+                                    Through the media
+                                </div>
+                                <div className="lesson-item-description">
+                                    Обсудим лексику на тему «Средства массовой информации».
+                                </div>
+                                <div className='lesson-item-teacher'>
+                                    <div className="teacher-text">ВЕДУЩИЙ</div>
+                                    <div className="teacher-name">Антонина Ситнова</div>
+                                </div>
+                            </div>
+                            <div className="lesson-item-info">
+                                <div className="lesson-item-date">
+                                    <div className="lesson-item-time">
+                                        09:00
+                                    </div>
+                                    <div className="lesson-item-day">
+                                        Пятница, 5 Марта
+                                    </div>
+                                </div>
+                                <div>
+                                    <button className='lesson-submit group-sort-btn'>ЗАПИСАТЬСЯ</button>
+                                </div>
+                                <div className="lesson-item-places-left">
+                                    Осталось мест: 8
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div className="lesson-list-item">
+                            <div className="lesson-item-image">
+                                <img src={Logo} alt={Logo}
+                                     style={{width: '110px', height: '52px'}}/>
+                            </div>
+                            <div className='lesson-item-text'>
+                                <div className="lesson-item-title">
+                                    Through the media
+                                </div>
+                                <div className="lesson-item-description">
+                                    Обсудим лексику на тему «Средства массовой информации».
+                                </div>
+                                <div className='lesson-item-teacher'>
+                                    <div className="teacher-text">ВЕДУЩИЙ</div>
+                                    <div className="teacher-name">Антонина Ситнова</div>
+                                </div>
+                            </div>
+                            <div className="lesson-item-info">
+                                <div className="lesson-item-date">
+                                    <div className="lesson-item-time">
+                                        09:00
+                                    </div>
+                                    <div className="lesson-item-day">
+                                        Пятница, 5 Марта
+                                    </div>
+                                </div>
+                                <div>
+                                    <button className='lesson-submit group-sort-btn'>ЗАПИСАТЬСЯ</button>
+                                </div>
+                                <div className="lesson-item-places-left">
+                                    Осталось мест: 8
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div className="lesson-list-item">
+                            <div className="lesson-item-image">
+                                <img src={Logo} alt={Logo}
+                                     style={{width: '110px', height: '52px'}}/>
+                            </div>
+                            <div className='lesson-item-text'>
+                                <div className="lesson-item-title">
+                                    Through the media
+                                </div>
+                                <div className="lesson-item-description">
+                                    Обсудим лексику на тему «Средства массовой информации».
+                                </div>
+                                <div className='lesson-item-teacher'>
+                                    <div className="teacher-text">ВЕДУЩИЙ</div>
+                                    <div className="teacher-name">Антонина Ситнова</div>
+                                </div>
+                            </div>
+                            <div className="lesson-item-info">
+                                <div className="lesson-item-date">
+                                    <div className="lesson-item-time">
+                                        09:00
+                                    </div>
+                                    <div className="lesson-item-day">
+                                        Пятница, 5 Марта
+                                    </div>
+                                </div>
+                                <div>
+                                    <button className='lesson-submit group-sort-btn'>ЗАПИСАТЬСЯ</button>
+                                </div>
+                                <div className="lesson-item-places-left">
+                                    Осталось мест: 8
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
                 </Row>
             </Container>

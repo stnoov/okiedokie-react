@@ -53,18 +53,27 @@ const Header = () => {
                     {user ?
                         <div className='user-info'>
                             <Nav.Link>
-                                <div className='side-links'>
+                                <div className='side-links nav-desktop'>
                                     {user && user.balance}₽
                                 </div>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <div className='side-links'>
-                                    <span>{user && user.first_name} {user && user.last_name}</span>
+                                <div className='side-links nav-mobile'>
+                                    Пополнить баланс
                                 </div>
                             </Nav.Link>
                             <Nav.Link>
-                                <div className="side-links">
+                                <div className='side-links nav-desktop'>
+                                    <span>{user && user.first_name} {user && user.last_name}</span>
+                                </div>
+                                <div className='side-links nav-mobile'>
+                                    Профиль
+                                </div>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <div className="side-links nav-desktop">
                                     <ExitToAppIcon className='logout-button' onClick={logOut}/>
+                                </div>
+                                <div className='side-links nav-mobile'>
+                                    Выйти
                                 </div>
                             </Nav.Link>
 
