@@ -1,33 +1,95 @@
 .lessons-page {
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-items: center;
     padding-top: 150px;
 }
-
-.sort_header {
-    border: 2px solid rgba(247,116,130, 0.3);
-    padding: 15px 25px;
-    min-width: 320px;
+.lessons-sort {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 0 25px;
 }
-.sort_body {
-    min-height: 100px;
-    min-width: 320px;
-    border: 2px solid rgba(247,116,130, 0.3);
-    border-top: none;
+.group-sort {
+    margin-right: auto;
+}
+.group-sort-btn {
+    padding: 5px 15px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid mintcream;
+    margin-right: 5px;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.group-sort-btn:hover {
+    background-color: rgba(247,116,130, 0.3);
+}
+.active-group {
+    background-color: rgba(247,116,130, 0.5);
+}
+.active-group:hover {
+    background-color: rgba(247,116,130, 0.5);
+}
+
+.date-sort {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lessons-list {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.lesson-list-item {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(255,255,255, 0.5);
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
 }
-
-.sort_group {
-    border-bottom: 1px solid rgba(247,116,130, 0.3);
+.lesson-item-image {
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
-
-.sort_group label {
+.lesson-item-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: auto;
+}
+.lesson-item-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+.lesson-item-teacher {
+    margin: 10px 0;
+}
+.teacher-text {
+    font-size: 14px;
+}
+.teacher-name {
+    font-weight: bold;
     font-size: 18px;
 }
 
-.sort_date {
-    margin-top: 10px
+.lesson-item-info {
+    margin-right: 30px;
+}
+.lesson-item-time {
+    font-weight: bold;
+    font-size: 24px;
+}
+.lesson-item-day {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -5px;
+}
+.lesson-submit {
+    margin: 10px;
+    padding: 5px 30px;
 }
