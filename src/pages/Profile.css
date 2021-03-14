@@ -5,3 +5,82 @@
     padding-top: 150px;
     position: relative;
 }
+.profile-name {
+    text-align: left;
+    padding: 24px 24px 0;
+}
+.profile-details {
+    border-top: 1px solid whitesmoke;
+    margin: 24px;
+    padding: 24px;
+    font-size: 22px;
+}
+
+.details-okie-points {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.swap-okie-btn {
+    margin-left: 10px;
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid whitesmoke;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.details-email {
+    text-align: left;
+    padding: 20px 10px;
+}
+
+.change-email {
+    padding: 10px 20px;
+    border: 1px solid rgba(247,116,130, 0.3);
+}
+.change-email-btn {
+    margin-left: 10px;
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid whitesmoke;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    font-size: 18px;
+    padding: 10px;
+}
+.change-email-btn:hover, .swap-okie-btn:hover, .update-password-btn:hover {
+    background-color: rgba(247,116,130, 0.3);
+}
+.update-password {
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.update-password-input {
+    margin: 10px 0 !important;
+    padding: 10px 20px;
+    border: 1px solid rgba(247,116,130, 0.3);
+}
+.update-password-btn {
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid whitesmoke;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    font-size: 18px;
+    padding: 10px;
+}
+@media only screen and (max-width: 991px) {
+    .profile-page {
+        position: unset;
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px 5px;
+    }
+
+}
