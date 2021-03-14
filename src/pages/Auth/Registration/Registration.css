@@ -39,7 +39,6 @@
     border: 1px solid #BB4191;
     outline: none
 }
-.back-button:focus{outline:0}
 
 .register-button {
     align-self: flex-end;
@@ -49,8 +48,6 @@
     color: white;
     border: 1px solid #BB4191;
 }
-
-.register-button:focus{outline:0}
 
 .report-error-icon {
     color:  yellow;

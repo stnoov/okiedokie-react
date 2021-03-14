@@ -1,11 +1,15 @@
 .lessons-page {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100vw;
     display: flex;
     justify-items: center;
     align-items: center;
     position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
 }
+
 .lessons-sort {
     margin-top: 100px;
     display: flex;
@@ -147,4 +151,10 @@
         font-size: 16px;
         line-height: 18px;
     }
+}
+
+@media screen and (max-height: 880px) {
+  .lessons-page {
+      display: block;
+  }
 }

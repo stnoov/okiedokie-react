@@ -41,7 +41,6 @@
     border: 1px solid #BB4191;
 }
 
-.log-in-button:focus{outline:0}
 
 .log-in-button:hover {
     background-color: #BD2CA0;

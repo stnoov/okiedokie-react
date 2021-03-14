@@ -34,7 +34,7 @@ const LoginForm = () => {
         }})
 
     if (isLoggedIn) {
-        return <Redirect to="/home" />;
+        return <Redirect to="/" />;
     }
 
     return (

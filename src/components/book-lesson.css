@@ -1,0 +1,6 @@
+.modal-open {
+    overflow-y: auto!important;
+    height: 100vh;
+    padding-right: 0!important;
+}
+
