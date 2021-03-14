@@ -1,7 +1,7 @@
 import './App.css';
 import {Route} from 'react-router-dom'
 
-import {Login, Registration, Welcome, Lessons, Contact, Reviews, Admin} from "./pages";
+import {Login, Registration, Welcome, Lessons, Contact, Reviews, Admin, Profile} from "./pages";
 import {ToastContainer} from 'react-toastify';
 
 import {useSelector} from "react-redux";
@@ -30,7 +30,7 @@ function App() {
             {isLoggedIn &&
             <div>
                 <Route path='/lessons' component={Lessons} exact/>
-
+                <Route path='/profile' component={Profile} exact/>
                 {user.roles.includes("ROLE_ADMIN") &&
                 <Route path='/admin' component={Admin} exact/>
                 }

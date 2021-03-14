@@ -61,12 +61,14 @@ const Header = () => {
                                 </div>
                             </Nav.Link>
                             <Nav.Link>
+                                <Link to="/profile" style={{textDecoration: 'none'}}>
                                 <div className='side-links nav-desktop'>
                                     <span>{user && user.first_name} {user && user.last_name}</span>
                                 </div>
                                 <div className='side-links nav-mobile'>
                                     Профиль
                                 </div>
+                                </Link>
                             </Nav.Link>
                             <Nav.Link>
                                 <div className="side-links nav-desktop">
