@@ -3,6 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import Pagination from '@material-ui/lab/Pagination'
 import './styles/Reviews.css'
+import AddReview from "../components/add-review";
 
 const useStyles = makeStyles(() => ({
     ul: {
@@ -25,7 +26,7 @@ const Reviews = () => {
                 <Row>
                     <Col>
                         <div className="reviews-list">
-                            <button className='add-review-btn'>Оставить отзыв</button>
+                            <AddReview />
                             <div className="review-item">
                                 <div className="review-name">
                                     Artem Sitnov

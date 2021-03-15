@@ -2,7 +2,7 @@
     min-height: 100vh;
     max-width: 100vw;
     display: flex;
-    padding-top: 120px;
+    padding-top: 140px;
     position: relative;
 }
 
@@ -50,6 +50,25 @@
 
 .container {
     padding: 0;
+}
+
+.review-content {
+    padding: 10px;
+    width: 100%;
+    min-height: 50px;
+    border-radius: 6px;
+}
+::placeholder {
+    color: gray;
+}
+
+.submit-review-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px 60px;
 }
 
 @media only screen and (max-width: 991px) {

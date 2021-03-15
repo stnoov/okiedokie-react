@@ -71,6 +71,12 @@
 ul {
     list-style-type: none;
 }
+.ul-main-line {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 2px!important;
+
+}
 
 @media only screen and (max-width: 991px) {
     .welcome-page {

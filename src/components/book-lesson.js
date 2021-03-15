@@ -1,5 +1,5 @@
 import React from "react";
-import {Modal, Button, Container, Row, Col} from "react-bootstrap";
+import {Modal, Container, Row, Col} from "react-bootstrap";
 import './book-lesson.css'
 
 export default function BookLesson() {

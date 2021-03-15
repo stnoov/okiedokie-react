@@ -23,7 +23,7 @@ export default function WelcomePage() {
                     <Col>
                         <div className='welcome-about-text'>
                             <ul>
-                                <li><h2><b>Английский разговорный клуб для детей и подростков</b></h2></li>
+                                <li className='ul-main-line'>Английский разговорный клуб для детей и подростков</li>
                                 <div className='about-list'>
                                     <li><b>Okie Dokie!</b> – это отличный способ улучшить навыки говорения на английском
                                         языке!

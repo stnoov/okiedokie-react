@@ -9,7 +9,7 @@ import BookLesson from '../components/book-lesson'
 const Lessons = () => {
 
     const [lessons, setLessons] = React.useState([])
-
+    const [activeType, setActiveType] = React.useState(0)
 
     // React.useEffect(() => {
     //     axios.get("http://localhost:8080/api/lessons/get_lessons").then(response => {
@@ -23,10 +23,10 @@ const Lessons = () => {
                 <Row className='lessons-sort-row'>
                     <div className='lessons-sort'>
                         <div className="group-sort">
-                            <button className='group-sort-btn active-group'>Все</button>
-                            <button className='group-sort-btn'>Младшая группа</button>
-                            <button className='group-sort-btn'>Старшая группа</button>
-                            <button className='group-sort-btn'>Индивидуальные занятия</button>
+                            <button onClick={() => setActiveType(0)} className={`group-sort-btn ${activeType === 0 ? 'active-group': ''}`}>Все</button>
+                            <button onClick={() => setActiveType(1)} className={`group-sort-btn ${activeType === 1 ? 'active-group': ''}`}>Младшая группа</button>
+                            <button onClick={() => setActiveType(2)} className={`group-sort-btn ${activeType === 2 ? 'active-group': ''}`}>Старшая группа</button>
+                            <button onClick={() => setActiveType(3)} className={`group-sort-btn ${activeType === 3 ? 'active-group': ''}`}>Индивидуальные занятия</button>
                         </div>
                         <div className='date-sort'>
                             Сортировка по: Дате <ArrowDownwardIcon />
