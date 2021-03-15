@@ -3,7 +3,6 @@
 }
 *:focus {outline:none !important}
 
-
 .geometry-bg {
   background:   url("./images/bg-geometry-blurred.png");
   width: 100vw;

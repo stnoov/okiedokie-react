@@ -38,6 +38,8 @@ input {
     max-width: 54%;
 }
 
+
+
 @media only screen and (max-width: 991px) {
     .contact-page {
         position: unset;

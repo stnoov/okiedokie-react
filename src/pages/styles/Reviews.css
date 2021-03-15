@@ -58,7 +58,7 @@
     min-height: 50px;
     border-radius: 6px;
 }
-::placeholder {
+.review-content::placeholder {
     color: gray;
 }
 
