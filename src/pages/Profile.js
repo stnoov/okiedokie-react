@@ -1,5 +1,5 @@
 import React from 'react';
-import './Profile.css'
+import './styles/Profile.css'
 import {Container, Row, Col} from "react-bootstrap";
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 
@@ -18,7 +18,7 @@ const Profile = () => {
                         Мои OkieDokie points: 0 <button className='swap-okie-btn'><SwapHorizIcon /> Обменять</button>
                     </div>
                     <div className="details-email">
-                        <span className="current-email">Почта: <input className="change-email" type="text" value='stnoov@gmail.com'/></span> <button className='change-email-btn'>Обновить</button>
+                        <span className="current-email">Почта: <input className="change-email" type="text" value='stnoov@gmail.com'/></span> <button className='change-email-btn'>Изменить</button>
                     </div>
                     <div className="update-password">
                         Обновить пароль

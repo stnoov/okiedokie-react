@@ -1,7 +1,7 @@
 import './App.css';
 import {Route} from 'react-router-dom'
 
-import {Login, Registration, Welcome, Lessons, Contact, Reviews, Admin, Profile} from "./pages";
+import {Login, Registration, Welcome, Lessons, Contact, Reviews, Admin, Profile, Shop} from "./pages";
 import {ToastContainer} from 'react-toastify';
 
 import {useSelector} from "react-redux";
@@ -27,6 +27,7 @@ function App() {
             <Route path='/registration' component={Registration} exact/>
             <Route path='/contact' component={Contact} exact/>
             <Route path='/reviews' component={Reviews} exact/>
+            <Route path='/shop' component={Shop} exact/>
             {isLoggedIn &&
             <div>
                 <Route path='/lessons' component={Lessons} exact/>

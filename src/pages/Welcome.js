@@ -1,4 +1,4 @@
-import './Welcome.css'
+import './styles/Welcome.css'
 import {Container, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom"
 

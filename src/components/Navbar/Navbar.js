@@ -34,11 +34,13 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
+                        {user &&
                         <Nav.Link>
                             <Link to="/lessons" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Занятия</span>
                             </Link>
                         </Nav.Link>
+                        }
                         <Nav.Link>
                             <Link to="/contact" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Связаться</span>
@@ -53,12 +55,14 @@ const Header = () => {
                     {user ?
                         <div className='user-info'>
                             <Nav.Link>
+                                <Link to="/shop" style={{textDecoration: 'none'}}>
                                 <div className='side-links nav-desktop'>
-                                    {user && user.balance}₽
+                                    {user && user.balance} <b>OC</b>
                                 </div>
                                 <div className='side-links nav-mobile'>
                                     Пополнить баланс
                                 </div>
+                                </Link>
                             </Nav.Link>
                             <Nav.Link>
                                 <Link to="/profile" style={{textDecoration: 'none'}}>

@@ -16,7 +16,7 @@
 }
 
 input {
-    padding: 20px 50px;
+    padding: 20px 55px;
     margin: 10px;
     background-color: transparent;
     border: 3px solid #A02974;
@@ -36,5 +36,17 @@ input {
 
 .last-row {
     max-width: 54%;
+}
 
+@media only screen and (max-width: 991px) {
+    .contact-page {
+        position: unset;
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+        padding: 40px;
+    }
+    textarea {
+        min-width: 330px;
+    }
 }

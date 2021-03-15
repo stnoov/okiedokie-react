@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Contact.css'
+import './styles/Contact.css'
 import {Container, Row, Col} from "react-bootstrap";
 import {useSelector} from "react-redux";
 
@@ -14,15 +14,15 @@ const Contact = () => {
                 <h3>Напишите нам</h3>
                 <Row>
                     <Col>
-                        <input placeholder={user.email}/>
-                        <input placeholder={user.first_name}/>
+                        <div>
+                            <input placeholder={user ? user.email : 'Ваша почта'}/>
+                            <input placeholder={user ? user.first_name : 'Ваше имя'}/>
+                        </div>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <textarea className='message-text' placeholder='Ваше сообщение'>
-
-                        </textarea>
+                        <textarea className='message-text' placeholder='Ваше сообщение' />
                     </Col>
                 </Row>
                 <Row className='last-row'>

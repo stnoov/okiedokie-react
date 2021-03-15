@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import Pagination from '@material-ui/lab/Pagination'
-import './Reviews.css'
+import './styles/Reviews.css'
 
 const useStyles = makeStyles(() => ({
     ul: {
