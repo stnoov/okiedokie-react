@@ -12,6 +12,8 @@ import {logout} from "../../redux/actions/auth";
 
 const Header = () => {
 
+
+    const [expanded, setExpanded] = React.useState(false);
     const {user} = useSelector(state => state.auth);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -23,7 +25,7 @@ const Header = () => {
 
     return (
 
-        <Navbar expand="lg">
+        <Navbar expand="lg" expanded={expanded}>
             <Container>
                 <Navbar.Brand href="#home">
                     <Link to="/" style={{textDecoration: 'none'}}>
@@ -31,22 +33,22 @@ const Header = () => {
                              style={{width: '110px', height: '52px'}}/>
                     </Link>
                     </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         {user &&
-                        <Nav.Link>
+                        <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                             <Link to="/lessons" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Занятия</span>
                             </Link>
                         </Nav.Link>
                         }
-                        <Nav.Link>
+                        <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                             <Link to="/contact" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Связаться</span>
                             </Link>
                         </Nav.Link>
-                        <Nav.Link>
+                        <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                             <Link to="/reviews" style={{textDecoration: 'none'}}>
                                 <span className='main-links'>Отзывы</span>
                             </Link>
@@ -54,7 +56,7 @@ const Header = () => {
                     </Nav>
                     {user ?
                         <div className='user-info'>
-                            <Nav.Link>
+                            <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                                 <Link to="/shop" style={{textDecoration: 'none'}}>
                                 <div className='side-links nav-desktop'>
                                     {user && user.balance} <b>OC</b>
@@ -64,7 +66,7 @@ const Header = () => {
                                 </div>
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link>
+                            <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                                 <Link to="/profile" style={{textDecoration: 'none'}}>
                                 <div className='side-links nav-desktop'>
                                     <span>{user && user.first_name} {user && user.last_name}</span>
@@ -74,7 +76,7 @@ const Header = () => {
                                 </div>
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link>
+                            <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                                 <div className="side-links nav-desktop">
                                     <ExitToAppIcon className='logout-button' onClick={logOut}/>
                                 </div>
@@ -86,12 +88,12 @@ const Header = () => {
                         </div>
                         :
                         <div className='user-info'>
-                            <Nav.Link>
+                            <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                                 <Link to="/login" style={{textDecoration: 'none'}}>
                                     <span className='auth-button'>Войти</span>
                                 </Link>
                             </Nav.Link>
-                            <Nav.Link>
+                            <Nav.Link onClick={() => setTimeout(() => {setExpanded(false)}, 150)}>
                                 <Link to="/registration" style={{textDecoration: 'none'}}>
                                     <span className='auth-button'>Зарегистрироваться</span>
                                 </Link>
