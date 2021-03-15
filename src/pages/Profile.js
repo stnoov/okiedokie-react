@@ -2,6 +2,8 @@ import React from 'react';
 import './styles/Profile.css'
 import {Container, Row, Col} from "react-bootstrap";
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import HistoryIcon from '@material-ui/icons/History';
 
 const Profile = () => {
 
@@ -10,8 +12,9 @@ const Profile = () => {
     return (
         <div className='geometry-bg profile-page'>
             <Container>
-                <div className="profile-name">
-                    <h2>Artem Sitnov</h2>
+                <div className="profile-header">
+                    <div className='profile-tab'><AccountCircleIcon fontSize={"large"}/>Профиль</div>
+                    <div className='history-tab'><HistoryIcon fontSize={"large"}/>История</div>
                 </div>
                 <div className="profile-details">
                     <div className="details-okie-points">

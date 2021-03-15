@@ -5,9 +5,21 @@
     padding-top: 120px;
     position: relative;
 }
-.profile-name {
-    text-align: left;
+.profile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 24px 24px 0;
+}
+.profile-tab {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+.history-tab {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
 }
 .profile-details {
     border-top: 1px solid whitesmoke;

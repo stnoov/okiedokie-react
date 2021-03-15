@@ -1,13 +1,28 @@
 import React from "react";
-import {Modal, Button, Container, Row, Col} from "react-bootstrap";
+import {Modal, Container, Row, Col} from "react-bootstrap";
 import '../pages/styles/Reviews.css'
+import {useSelector} from "react-redux";
+import {toast} from "react-toastify";
 
 export default function AddReview() {
+
     const [lgShow, setLgShow] = React.useState(false);
 
+    const {user, isLoggedIn} = useSelector(state => state.auth);
+
+    const notifyError = () => toast.error("Оставлять отзывы могут только зарегистрированные пользователи!");
+
+    const showModal = () => {
+        if(isLoggedIn) {
+            setLgShow(true)
+        } else {
+            notifyError()
+        }
+
+    }
     return (
         <>
-            <button className='add-review-btn' onClick={() => setLgShow(true)}>Оставить отзыв</button>
+            <button className='add-review-btn' onClick={() => showModal()}>Оставить отзыв</button>
             <Modal
                 size="md"
                 show={lgShow}
