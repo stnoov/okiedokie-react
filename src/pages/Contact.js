@@ -15,8 +15,8 @@ const Contact = () => {
                 <Row>
                     <Col>
                         <div>
-                            <input placeholder={user ? user.email : 'Ваша почта'}/>
-                            <input placeholder={user ? user.first_name : 'Ваше имя'}/>
+                            <input className='contact-input-field' placeholder={user ? user.email : 'Ваша почта'}/>
+                            <input className='contact-input-field' placeholder={user ? user.first_name : 'Ваше имя'}/>
                         </div>
                     </Col>
                 </Row>

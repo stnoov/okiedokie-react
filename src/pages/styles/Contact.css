@@ -15,14 +15,13 @@
     color: white;
 }
 
-input {
+.contact-input-field {
     padding: 20px 55px;
     margin: 10px;
     background-color: transparent;
     border: 3px solid #A02974;
     color: white;
     font-size: 18px;
-    outline: none
 }
 
 .send-button {
@@ -42,13 +41,21 @@ input {
 
 @media only screen and (max-width: 991px) {
     .contact-page {
-        position: unset;
         height: 100%;
         width: 100%;
         min-height: 100vh;
-        padding: 40px;
+        padding-top: 40px;
+        align-items: flex-start;
+    }
+    .contact-input-field {
+        padding: 20px 40px;
+        margin: 10px;
+        background-color: transparent;
+        border: 3px solid #A02974;
+        color: white;
+        font-size: 18px;
     }
     textarea {
-        min-width: 330px;
+        min-width: 300px;
     }
 }
