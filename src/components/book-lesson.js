@@ -24,19 +24,20 @@ export default function BookLesson() {
                     <Container>
                         <Row>
                             <Col>
-                            <div className='book-lesson-modal-content'>
-                                <div className="lesson-id">
-                                    Занятие №1
+                                <div className='book-lesson-modal-content'>
+                                    <div className="lesson-id">
+                                        <div>Занятие №1</div>
+                                        <div>5 Марта, 9:00</div>
+                                    </div>
+                                    <div className="lesson-description">
+                                        <ul>
+                                            <li>Ведущий: Антонина Ситнова</li>
+                                            <li>Тип занятия: Старшая группа</li>
+                                            <li>Стоимость: 1 OC</li>
+                                        </ul>
+                                    </div>
+                                    <button className='modal-submit-btn'>Оплатить 1 OC</button>
                                 </div>
-                                <div className="lesson-description">
-                                    <ul>
-                                        <li>Ведущий: Антонина Ситнова</li>
-                                        <li>Тип занятия: Старшая группа</li>
-                                        <li>Стоимость: 1 OC</li>
-                                    </ul>
-                                </div>
-                                <button className='modal-submit-btn'>Оплатить 1 OC</button>
-                            </div>
                             </Col>
                         </Row>
                     </Container>
