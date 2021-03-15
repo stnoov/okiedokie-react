@@ -1,13 +1,27 @@
 import React from 'react';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import './styles/Lessons.css'
 import {Container, Row, Col} from "react-bootstrap";
 import axios from "axios";
 import Logo from "../images/okie-dokie.logo.png";
 import BookLesson from '../components/book-lesson'
+import Pagination from "@material-ui/lab/Pagination";
+import {makeStyles} from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+    ul: {
+        "& .MuiPaginationItem-root": {
+            color: "#fff",
+            ":focus": {
+                outline: 0
+            }
+        }
+    }
+}));
 
 const Lessons = () => {
-
+    const classes = useStyles();
     const [lessons, setLessons] = React.useState([])
     const [activeType, setActiveType] = React.useState(0)
 
@@ -29,7 +43,7 @@ const Lessons = () => {
                             <button onClick={() => setActiveType(3)} className={`group-sort-btn ${activeType === 3 ? 'active-group': ''}`}>Индивидуальные занятия</button>
                         </div>
                         <div className='date-sort'>
-                            Сортировка по: Дате <ArrowDownwardIcon />
+                            Сортировка по: Дате <ArrowUpwardIcon />
                         </div>
                     </div>
                 </Row>
@@ -174,7 +188,7 @@ const Lessons = () => {
                                 </div>
                             </div>
                         </div>
-
+                        <Pagination classes={{ ul: classes.ul }} count={1} color="secondary"/>
                     </div>
                 </Row>
             </Container>
