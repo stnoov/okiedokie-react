@@ -55,6 +55,9 @@
         color: white;
         font-size: 18px;
     }
+    .swap-okie-btn, .change-email-btn {
+        margin-left: 0!important;
+    }
     textarea {
         min-width: 300px;
     }

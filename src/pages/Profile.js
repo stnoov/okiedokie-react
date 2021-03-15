@@ -21,7 +21,9 @@ const Profile = () => {
                         Мои OkieDokie points: 0 <button className='swap-okie-btn'><SwapHorizIcon /> Обменять</button>
                     </div>
                     <div className="details-email">
-                        <span className="current-email">Почта: <input className="change-email" type="text" value='stnoov@gmail.com'/></span> <button className='change-email-btn'>Изменить</button>
+                        <span className="current-email">Почта:</span>
+                        <input className="change-email" type="text" value='stnoov@gmail.com'/>
+                        <button className='change-email-btn'>Изменить</button>
                     </div>
                     <div className="update-password">
                         Обновить пароль
