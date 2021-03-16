@@ -23,11 +23,16 @@ const Reviews = () => {
 
     const [reviews, setReviews] = React.useState()
 
-    React.useEffect(() => {
+
+    const updateReviewsList = () => {
         axios.get("http://localhost:8080/api/reviews/get_reviews").then((response) => {
             setReviews(response.data.message)
             console.log(reviews)
         })
+    }
+
+    React.useEffect(() => {
+        updateReviewsList()
     }, [])
 
     return (
@@ -36,14 +41,14 @@ const Reviews = () => {
                 <Row>
                     <Col>
                         <div className="reviews-list">
-                            <AddReview />
-                            {reviews && reviews.map((elem) => {
+                            <AddReview updateReviewsList={updateReviewsList}/>
+                            {reviews && reviews.slice(0,4).map((elem) => {
                                 return <div className="review-item">
                                     <div className="review-name">
                                         {elem.author.first_name} {elem.author.last_name}
                                     </div>
                                     <div className="review-date">
-                                        {elem.createdAt}
+                                        {(new Date(Date.parse(elem.createdAt))).toLocaleString('ru-ru', {  day: 'numeric', month: 'long' })}
                                     </div>
                                     <div className="review-text">
                                         {elem.message}

@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 import {toast} from "react-toastify";
 import axios from "axios";
 
-export default function AddReview() {
+export default function AddReview(props) {
 
     const [lgShow, setLgShow] = React.useState(false);
     const [message, setMessage] = React.useState('')
@@ -37,6 +37,7 @@ export default function AddReview() {
             if(response.data.message === 1) {
                 setLgShow(false);
                 notify()
+                props.updateReviewsList()
             }
         })
     }

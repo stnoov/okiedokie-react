@@ -43,6 +43,9 @@
 .review-date {
     margin-right: auto;
     padding: 5px 0;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .review-text {
