@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Pagination from '@material-ui/lab/Pagination'
 import './styles/Reviews.css'
 import AddReview from "../components/add-review";
+import axios from "axios";
 
 const useStyles = makeStyles(() => ({
     ul: {
@@ -20,6 +21,15 @@ const Reviews = () => {
 
     const classes = useStyles();
 
+    const [reviews, setReviews] = React.useState()
+
+    React.useEffect(() => {
+        axios.get("http://localhost:8080/api/reviews/get_reviews").then((response) => {
+            setReviews(response.data.message)
+            console.log(reviews)
+        })
+    }, [])
+
     return (
         <div className='geometry-bg reviews-page'>
             <Container >
@@ -27,44 +37,20 @@ const Reviews = () => {
                     <Col>
                         <div className="reviews-list">
                             <AddReview />
-                            <div className="review-item">
-                                <div className="review-name">
-                                    Artem Sitnov
+                            {reviews && reviews.map((elem) => {
+                                return <div className="review-item">
+                                    <div className="review-name">
+                                        {elem.author.first_name} {elem.author.last_name}
+                                    </div>
+                                    <div className="review-date">
+                                        {elem.createdAt}
+                                    </div>
+                                    <div className="review-text">
+                                        {elem.message}
+                                    </div>
                                 </div>
-                                <div className="review-date">
-                                    15 Марта, 2021
-                                </div>
-                                <div className="review-text">
-                                    Всего за месяц участия в разговорном клубе я преодолела языковой барьер, теперь не
-                                    страшно говорить на любые темы. И отдельное спасибо за драйв в викторинах Kahoot!
-                                </div>
-                            </div>
+                            })}
 
-                            <div className="review-item">
-                                <div className="review-name">
-                                    Artem Sitnov
-                                </div>
-                                <div className="review-date">
-                                    15 Марта, 2021
-                                </div>
-                                <div className="review-text">
-                                    Всего за месяц участия в разговорном клубе я преодолела языковой барьер, теперь не
-                                    страшно говорить на любые темы. И отдельное спасибо за драйв в викторинах Kahoot!
-                                </div>
-                            </div>
-
-                            <div className="review-item">
-                                <div className="review-name">
-                                    Artem Sitnov
-                                </div>
-                                <div className="review-date">
-                                    15 Марта, 2021
-                                </div>
-                                <div className="review-text">
-                                    Всего за месяц участия в разговорном клубе я преодолела языковой барьер, теперь не
-                                    страшно говорить на любые темы. И отдельное спасибо за драйв в викторинах Kahoot!
-                                </div>
-                            </div>
                             <Pagination classes={{ ul: classes.ul }} count={10} color="secondary"/>
                         </div>
                     </Col>

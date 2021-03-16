@@ -32,7 +32,8 @@
     padding: 25px 35px;
     border: 1px solid white;
     margin-bottom: 10px;
-    background-color: rgba(38,6,92, 0.3)
+    background-color: rgba(38,6,92, 0.3);
+    width: 100%;
 }
 
 .review-name {
