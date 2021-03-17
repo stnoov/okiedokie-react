@@ -5,8 +5,14 @@ import {Container, Row, Col} from "react-bootstrap";
 
 import UserModal from "./Modals/UserModal";
 import LessonModal from "./Modals/LessonModal";
+import {useSelector} from "react-redux";
+
+
 
 const Admin = () => {
+
+    const {user, isLoggedIn} = useSelector(state => state.auth);
+
     return (
         <div className='geometry-bg admin-page'>
             <Container>
