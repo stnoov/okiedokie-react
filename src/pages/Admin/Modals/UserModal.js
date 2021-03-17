@@ -30,9 +30,10 @@ const UserModal = () => {
                     <Modal.Title>Зарегистрарованные пользователи</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Table striped hover>
+                    <Table striped hover responsive>
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Имя</th>
                             <th>Фамилия</th>
                             <th>Возраст</th>
@@ -44,6 +45,7 @@ const UserModal = () => {
                         {users.map(user => {
                             return (
                                 <tr>
+                                    <td>{user.id}</td>
                                     <td>{user.first_name}</td>
                                     <td>{user.last_name}</td>
                                     <td>{user.age}</td>
